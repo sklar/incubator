@@ -1,0 +1,13 @@
+//- Webclips
+-
+    const WEB = htmlWebpackPlugin.options.webConfig;
+
+meta(name="twitter:card" content="summary")
+meta(property="og:description" content=WEB.description)
+//- meta(property="og:image" content=`${WEB.server.media}/${WEB.cloudinary.name}/image/upload/f_auto/v1553549384/elpramo/preview.jpg`)
+meta(property="og:locale" content=WEB.language.locale)
+meta(property="og:site_name" content=WEB.title)
+meta(property="og:title" content=`${WEB.title} – ${WEB.subtitle}`)
+meta(property="og:type" content="website")
+meta(property="og:url" content=WEB.hostname)
+

@@ -1,0 +1,56 @@
+/**
+ * Component ComponentName.
+ *
+ * @requires {function}    function
+ * @requires {mixin}       mixin
+ * @requires {placeholder} %placeholder
+ * @requires {variable}    $variable
+ * @requires component
+ */
+
+// =============================================================================
+// ComponentName
+// =============================================================================
+
+// .component {}
+
+/**
+ * Modifiers.
+ */
+
+// .component--modifier {}
+
+// .component {
+//     &.--modifier {}
+// }
+
+/**
+ * States.
+ */
+
+// .is-component-state {}
+
+// .component {
+//     &.is-state {}
+// }
+
+/**
+ * Context.
+ */
+
+// .has-component {}
+
+/**
+ * Animations.
+ */
+
+// @keyframes component-animation {}
+
+// =============================================================================
+// Subcomponents
+// =============================================================================
+
+// SubcomponentName
+// =============================================================================
+
+// .component__subcomponent {}

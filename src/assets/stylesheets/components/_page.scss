@@ -1,0 +1,13 @@
+/**
+ * Component Page.
+ */
+
+// =============================================================================
+// Page
+// =============================================================================
+
+.page {
+    // max-width: map-fetch($page-size, screen, max);
+    min-width: map-fetch($page-size, screen, min);
+    position: relative;
+}

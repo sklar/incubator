@@ -1,0 +1,51 @@
+/**
+ * Main.
+ */
+
+// =============================================================================
+// Main
+// =============================================================================
+
+// Imports settings, libs, frameworks, layers, helpers and compoments.
+// ORDER DOES MATTER!
+
+// Libs, Frameworks
+// =============================================================================
+
+// @import "mathsass";
+
+// Settings
+// =============================================================================
+
+// @import "layers/color.settings";
+@import "layers/base.settings";
+@import "layers/breakpoints.settings";
+
+@import "components/page.settings";
+
+// Helpers
+// =============================================================================
+
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/extends";
+
+// Layers
+// =============================================================================
+
+@import "layers/base";
+
+// Components
+// =============================================================================
+
+@import "components/page";
+// @import "components/page.body";
+// @import "components/page.foot";
+// @import "components/page.head";
+
+// Layers (hight priority)
+// =============================================================================
+
+// Because ORDER DOES MATTER!
+
+@import "layers/utility";

@@ -1,0 +1,73 @@
+/**
+ * Layer Base settings.
+ */
+
+// =============================================================================
+// Base settings
+// =============================================================================
+
+// Set base background color.
+$base-background: GAINSBORO;
+
+// Set base text color.
+$base-color: SLATEGRAY;
+
+// Set base font family stack.
+$base-font-stack: (Helvetica, sans-serif);
+
+// Set base font size.
+$base-font-size: 16px;
+
+// Set browser default font size.
+$base-font-size--browser: 16px;
+
+// Set base font weight.
+$base-font-weight: 400;
+
+// Set amount lists and blockquotes are indented.
+$base-indent: 32px;
+
+// Set base line height.
+$base-line-height: 22px;
+
+// Set base line height ratio.
+$base-line-height-ratio: $base-line-height / $base-font-size;
+
+// Set base rhythm unit.
+$base-rhythm-unit: 0.5;
+
+// Set base type scale.
+// @link http://bit.ly/2t0QuFw
+$base-type-scale: (
+    3.052,  // 49px
+    2.441,  // 39px
+    1.953,  // 31px
+    1.563,  // 25px
+    1.250,  // 20px
+    1.000,  // 16px
+    0.800,  // 13px
+);
+
+// Set base `::selection` background.
+$base-selection-background: GOLD;
+
+// Browser (OS) specific
+// =============================================================================
+
+/**
+ * Base scrollbar
+ */
+
+// // Set base scrollbar radius.
+// $base-scrollbar-radius: 4px;
+
+// // Set base scrollbar size.
+// $base-scrollbar-size: 8px;
+
+// $base-scrollbar-thumb: (
+//     hover:      rgba($black, 0.6),   // hovered
+//     initial:    rgba($black, 0.4),
+// );
+
+// // Set base scrollbar track color.
+// $base-scrollbar-track: rgba($black, 0.1);

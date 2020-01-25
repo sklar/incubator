@@ -1,0 +1,24 @@
+# Ignored files.
+# @link https://git-scm.com/docs/gitignore
+
+public
+
+*.log
+
+
+# ##############################################################################
+# Specific patterns
+# ##############################################################################
+
+# IDE
+.history
+.idea
+.vscode/*
+*.sublime-*
+
+# node
+node_modules
+
+# OS
+.DS_Store
+Thumbs.db

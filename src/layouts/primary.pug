@@ -1,0 +1,37 @@
+-
+    const WEB = htmlWebpackPlugin.options.webConfig;
+
+block variables
+
+doctype html
+html(
+    lang=WEB.language.code
+    prefix="og: http://ogp.me/ns#"
+)
+
+    head
+        //- Metadata
+        include ../partials/head.meta.pug
+
+        //- Webclips
+        //- include ../partials/head.clips.pug
+
+        //- Web icons
+        //- include ../partials/head.icons.pug
+
+        //- Performance hints
+        include ../partials/head.hints.pug
+
+        //- Stylesheets
+        include ../partials/head.styles.pug
+
+        //- Scripts
+        include ../partials/head.scripts.pug
+
+    body
+        .page
+            //- include ../partials/header.pug
+
+            include ../partials/body.pug
+
+            //- include ../partials/footer.pug

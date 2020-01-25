@@ -1,0 +1,9 @@
+/**
+ * Enables hardware accelerated animations. Use carefully!
+ *
+ * TODO: Consider using `will-change` property.
+ */
+
+@mixin acceleration {
+    backface-visibility: hidden;
+}

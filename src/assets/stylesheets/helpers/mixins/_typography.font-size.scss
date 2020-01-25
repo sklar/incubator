@@ -1,0 +1,24 @@
+/**
+ * Set font size and line height to maintain vertical rhythm.
+ *
+ * @param  {Number} $size-to                      - Target font size
+ * @param  {Number} $unit-to    (rem)             - Target unit
+ * @param  {Number} $lines      (auto)            - Target max. baseline multiple
+ * @param  {Number} $size-from  ($base-font-size) - Context font size
+ */
+
+@mixin font-size(
+    $size-to: 0,
+    $unit-to: "rem",
+    $lines: auto,
+    $size-from: $base-font-size
+) {
+    $size-to: unit-convert($size-to, "px", $size-from);
+
+    @if $lines == auto {
+        $lines: ceil($size-to / $base-line-height);
+    }
+
+    font-size: unit-convert($size-to, $unit-to, $size-from);
+    line-height: rhythm-get($lines, $size-to);
+}

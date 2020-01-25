@@ -1,0 +1,39 @@
+/**
+ * Set font face.
+ *
+ * @link https://css-tricks.com/snippets/css/using-font-face/
+ *
+ * @param {String} $family           - Font family
+ * @param {String} $file-name        - Font filename
+ * @param {String} $file-path (".")  - Font filepath
+ * @param {List}   $format ("woff2") - Font file format
+ * @param {String} $style  (normal)  - Font style
+ * @param {String} $weight (normal)  - Font weight
+ */
+
+@mixin font-face(
+    $display: optional,
+    $family: "",
+    $file-name: "",
+    $file-path: ".",
+    $format: ("woff2"),
+    $style: normal,
+    $weight: normal
+) {
+    @if $family != "" and $file-name != "" {
+        @font-face {
+            font: {
+                display: $display;
+                family: $family;
+                style: $style;
+                weight: $weight;
+            }
+            @if length($format) > 1 {
+                src: url("#{$file-path}/#{$file-name}.woff2") format("woff2"),
+                    url("#{$file-path}/#{$file-name}.woff") format("woff");
+            } @else {
+                src: url("#{$file-path}/#{$file-name}.woff2") format("woff2");
+            }
+        }
+    }
+}

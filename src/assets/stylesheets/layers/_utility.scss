@@ -1,0 +1,351 @@
+/**
+ * Layer Utility.
+ *
+ * @requires {function}    rhythm-get
+ * @requires {mixin}       text-truncate
+ * @requires {mixin}       word-wrap
+ * @requires {placeholder} %group
+ */
+
+// =============================================================================
+// Utility
+// =============================================================================
+
+// =============================================================================
+// Layout
+// =============================================================================
+
+/**
+ * Display types.
+ */
+
+[class] {
+    &.u-block        { display: block; }
+    &.u-contents     { display: contents; }
+    &.u-flex         { display: flex; }
+    &.u-inline       { display: inline; }
+    &.u-inline-block { display: inline-block; }
+    &.u-inline-flex  { display: inline-flex; }
+    &.u-none         { display: none; }
+}
+
+/**
+ * Filters.
+ */
+
+// .u-filter {
+//     &.--monochrome {
+//         @media screen {
+//             filter: grayscale(100%);
+//         }
+//     }
+// }
+
+// .u-filter {
+//     &.--mute {
+//         @media screen {
+//             filter:
+//                 grayscale(80%)
+//                 opacity(60%);
+//         }
+//     }
+// }
+
+/**
+ * Flexbox.
+ */
+
+// .u-flex,
+// .u-inline-flex,
+[class*="flex"] {
+    &.--wrap {
+        flex-wrap: wrap;
+    }
+    &.--nowrap {
+        flex-wrap: nowrap;
+    }
+}
+
+.u-align {
+    &.--baseline {
+        align-items: baseline;
+    }
+    &.--middle {
+        align-items: center;
+    }
+    &.--bottom {
+        align-items: flex-end;
+    }
+    &.--top {
+        align-items: flex-start;
+    }
+    &.--stretch {
+        align-items: stretch;
+    }
+}
+
+.u-direction {
+    &.--column {
+        flex-direction: column;
+
+        &.--reverse {
+            flex-direction: column-reverse;
+        }
+    }
+    &.--row {
+        flex-direction: row;
+
+        &.--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.u-justify {
+    &.--around {
+        justify-content: space-around;
+    }
+    &.--between {
+        justify-content: space-between;
+    }
+    &.--center {
+        justify-content: center;
+    }
+    &.--end {
+        justify-content: flex-end;
+    }
+    &.--start {
+        justify-content: flex-start;
+    }
+}
+
+[data-flex="01a"] { flex: 0 1 auto; }
+[data-flex="110"] { flex: 1; }
+[data-flex="1xx"] { flex-grow: 1; }
+[data-flex="0xx"] { flex-grow: 0; }
+[data-flex="x1x"] { flex-shrink: 1; }
+[data-flex="x0x"] { flex-shrink: 1; }
+
+/**
+ * Floats and clear(s).
+ */
+
+// .u-float {
+//     &.--left {
+//         float: left;
+//     }
+//     &.--none {
+//         float: none;
+//     }
+//     &.--right {
+//         float: right;
+//     }
+// }
+
+// .u-clear {
+//     &.--both {
+//         clear: both;
+//     }
+//     &.--left {
+//         clear: left;
+//     }
+//     &.--right {
+//         clear: right;
+//     }
+// }
+
+// .u-group {
+//     @extend %group;
+// }
+
+/**
+ * Objects.
+ */
+
+.u-responsive {
+    height: auto;
+    width: 100%;
+}
+
+/**
+ * Position.
+ */
+
+[class] {
+    &.u-absolute   { position: absolute; }
+    &.u-relative   { position: relative; }
+    &.u-static     { position: static; }
+}
+
+.u-off {
+    left: -1000vw;
+    position: absolute;
+    top: -1000vh;
+}
+.u-stretch {
+    @include stretch;
+}
+
+/**
+ * Overflow.
+ */
+
+.u-overflow {
+    &.--hide {
+        overflow: hidden;
+    }
+    &.--show {
+        overflow: visible;
+    }
+}
+
+
+// =============================================================================
+// Typography
+// =============================================================================
+
+.u-font {
+    &.--bold {
+        font-weight: 600;
+    }
+    &.--italic {
+        font-style: italic;
+    }
+    &.--large {
+        font-size: 1.2em;
+    }
+    &.--light {
+        font-weight: 300;
+    }
+    &.--normal {
+        font: {
+            style: normal;
+            weight: 400;
+        }
+    }
+    &.--small {
+        font-size: 0.9em;
+    }
+}
+
+.u-rhythm {
+    margin-bottom: rhythm-get(1);
+}
+
+.u-text {
+    // Horizontal alignment
+    &.--center  { text-align: center; }
+    &.--left    { text-align: left; }
+    &.--right   { text-align: right; }
+
+    // Vertical alignment
+    &.--baseline { vertical-align: baseline; }
+    &.--bottom   { vertical-align: bottom; }
+    &.--middle   { vertical-align: middle; }
+    &.--top      { vertical-align: top; }
+
+    // Decoration
+    &.--none      { text-decoration: none; }
+    &.--strike    { text-decoration: line-through; }
+    &.--underline { text-decoration: underline; }
+
+    // Transformation
+    &.--capital { text-transform: capitalize; }
+    &.--lower   { text-transform: lowercase; }
+    &.--none    { text-transform: none; }
+    &.--upper   { text-transform: uppercase; }
+
+    &.--compact { line-height: 1.4; }
+    &.--loose   { line-height: 1.8; }
+}
+
+.u-truncate {
+    @include text-truncate;
+}
+
+.u-whitespace {
+    &.--normal {
+        white-space: normal;
+    }
+    &.--nowrap {
+        white-space: nowrap;
+    }
+    &.--pre {
+        white-space: pre;
+    }
+    &.--prewrap {
+        white-space: pre-wrap;
+    }
+}
+
+.u-word {
+    &.--wrap {
+        @include word-wrap;
+    }
+}
+
+/**
+ * Visibility.
+ */
+
+.u-visibility {
+    &.--hide {
+        visibility: hidden;
+    }
+    &.--show {
+        visibility: visible;
+    }
+}
+
+/**
+ * Line clamping.
+ *  @link https://css-tricks.com/line-clampin/#article-header-id-0
+ */
+
+[data-clamp] {
+    /* autoprefixer: off */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
+@each $n in (1, 2, 3) {
+    [data-clamp="#{$n}"] {
+        -webkit-line-clamp: $n;
+    }
+}
+
+
+// =============================================================================
+// Print
+// =============================================================================
+
+/**
+ * Page break.
+ * Browsers don't support `avoid` for `page-break-before` & `page-break-after`
+ *  (only `page-break-inside`).
+ * @link http://caniuse.com/#feat=css-page-break
+ */
+
+// .u-break {
+//     @media print {
+//         &.--after {
+//             &.--always {
+//                 page-break-after: always;
+//             }
+//         }
+//         &.--before {
+//             &.--always {
+//                 page-break-before: always;
+//             }
+//         }
+//         &.--inside {
+//             &.--always {
+//                 page-break-inside: always;
+//             }
+//             &.--avoid {
+//                 page-break-inside: avoid;
+//             }
+//         }
+//     }
+// }

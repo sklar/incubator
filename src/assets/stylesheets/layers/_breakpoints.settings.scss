@@ -1,0 +1,15 @@
+/**
+ * Layer Breakpoints settings.
+ */
+
+// =============================================================================
+// Breakpoints settings
+// =============================================================================
+
+// Set breakpoints map.
+$breakpoints: (
+    alpha   : 520px,
+    bravo   : 1020px,
+    charlie : 1205px,
+    delta   : 1860px, // debug 1400px,
+);

@@ -1,0 +1,30 @@
+/**
+ * Component Page settings.
+ */
+
+// =============================================================================
+// Page settings
+// =============================================================================
+
+// Set page breakpoints.
+$page-breaks: ();
+
+// Set page indent.
+$page-indent: (
+    // print: 10mm,
+    // screen: 4em,
+    // speech: ,
+);
+
+// Set page size.
+$page-size: (
+    // print: (
+    //     landscape: 297mm,
+    //     portrait: 210mm,
+    // ),
+    screen: (
+        max: 1200px,
+        min: 320px,
+    ),
+    // speech: ,
+);
